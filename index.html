@@ -11,6 +11,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
 .social-bar{display: flex; position: absolute; bottom:0;}
 .social-bar a{padding:0 10px;font-size: 26px;}
+.social-bar a:hover{color:gray;}
+.myLink {display: none}
+.copyright a:hover {color:blue;}
+#hamburger-box:hover {background: none !important;color: dimgray !important;}
 </style>
 <body>
 
@@ -23,35 +27,62 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <a href="#food" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Home</a>
   <a href="#about" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Blog</a>
   <a href="#about" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Services</a>
-  <a href="#about" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Gallery</a>
-  <a href="#about" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Get in Touch</a>
-  <h3 class="social-bar" style="margin-bottom:80px;padding:0 15px">Join Us</h3>
-  <div class="social-bar" style="margin-bottom:30px;padding-left:6px;">
+  <a href="#about" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Portfolio</a>
+  <a href="javascript:void(0)" onclick="myRightSidebar_open()"  class="w3-bar-item w3-button">Let's Chat</a>
+  <h3 class="social-bar" style="margin-bottom:122px;padding:0 15px">Join Us</h3>
+  <div class="social-bar" style="margin-bottom:80px;padding-left:6px;">
     <a href=""><i class="fab fa-facebook"></i></a>
     <a href=""><i class="fab fa-instagram"></i></a>
     <a href=""><i class="fab fa-twitter"></i></a>
     <a href=""><i class="fab fa-pinterest"></i></a>
   </div>
+  <div class="social-bar" style="padding:0 15px;font-size:14px;margin-bottom:20px;">
+    <p><span style="font-size:16px;">&copy;</span> 2020 Pyramid Special Jewelry, Inc. All Rights Reserved.</p>
+  </div>
+  <div class="copyright" style="padding:0 15px;font-size:12px;position:absolute;bottom:0;margin-bottom:14px;">
+    <a href="">Privacy</a>
+    <span>|</span>
+    <a href="">Terms</a>
+    <span>|</span>
+    <a href="">Site Map</a>
+  </div>
 </nav>
 
 <!-- Sidebar Right (hidden by default) -->
-<nav class="w3-sidebar w3-right w3-bar-block w3-card w3-top w3-xlarge w3-animate-top" style="display:none;z-index:2;" id="myRightSidebar">
+<nav class="w3-sidebar w3-right w3-bar-block w3-card w3-top w3-large w3-animate-right" style="display:none;z-index:2;" id="myRightSidebar">
   <a href="javascript:void(0)" onclick="myRightSidebar_close()" class="w3-bar-item w3-button">
-    <i class="fa fa-arrow-left" style="text-align:center !important;"></i>
+    <i class="fa fa-times" style="text-align:center !important;"></i>
   </a>
-  <h1>Schedule an Appointment</h1>
+  <div class="w3-card" style="width:500px;margin: 20px auto;">
+    <div class="w3-bar-item" style="background:black;color:white;">Do you need any design work done?</div>
+    <a href="" class="w3-bar-item w3-button">Detailed Sketch by Hand</a>
+    <a href="" class="w3-bar-item w3-button">Hand Carved Wax Model</a>
+    <a href="" class="w3-bar-item w3-button">3D CAD Design</a>
+    <a href="" class="w3-bar-item w3-button">No thank you.</a>
+    <div style="display:flex;justify-content:space-between;margin-bottom:80px;background:black;color:white !important;">
+      <button class="w3-button" onclick="myRightSidebar_close()">
+        <i class="fa fa-arrow-left" style="font-size:13px;"></i>
+        <span>Back</span>
+      </button>
+      <button class="w3-button">
+        <span>Next</span>
+        <i class="fa fa-arrow-right" style="font-size:13px;"></i>
+      </button>
+    </div>
+  </div>
 </nav>
 
 <!-- Top menu -->
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="myLeftSidebar_open()">
-      <i class="fas fa-bars"></i>
+    <div id="hamburger-box" class="w3-button w3-padding-16 w3-left" onclick="myLeftSidebar_open()">
+      <i id="hamburger-icon" class="fas fa-bars"></i>
     </div>
-    <div class="w3-button w3-right w3-padding-16" onclick="myRightSidebar_open()">Get in Touch</div>
+    <div class="w3-button w3-right w3-padding-16" onclick="myRightSidebar_open()">Let's Chat</div>
     <div class="w3-center w3-padding-16">Pyramid Special<br> Jewelry</div>
   </div>
 </div>
+
 
 <script>
 // Script to open and close sidebar
@@ -67,6 +98,15 @@ function myRightSidebar_open() {
 }
 function myRightSidebar_close() {
   document.getElementById("myRightSidebar").style.display = "none";
+}
+
+function myFunction() {
+  var x = document.getElementById("Demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 </script>
 
