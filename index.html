@@ -1,114 +1,78 @@
 <!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-<script src="https://kit.fontawesome.com/3281ab3c06.js" crossorigin="anonymous"></script>
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
-.social-bar{display: flex; position: absolute; bottom:0;}
-.social-bar a{padding:0 10px;font-size: 26px;}
-.social-bar a:hover{color:gray;}
-.myLink {display: none}
-.copyright a:hover {color:blue;}
-#hamburger-box:hover {background: none !important;color: dimgray !important;}
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/break.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3281ab3c06.js" crossorigin="anonymous"></script>
+  <script defer src="js/main.js"></script>
+</head>
 <body>
 
-<!-- Sidebar Left (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-large w3-animate-left" style="display:none;z-index:2;width:30%;min-width:250px" id="myLeftSidebar">
-  <a href="javascript:void(0)" onclick="myLeftSidebar_close()"
-  class="w3-bar-item w3-button">
-    <i class="fa fa-times"></i>
-  </a>
-  <a href="#food" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Home</a>
-  <a href="#about" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Blog</a>
-  <a href="#about" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Services</a>
-  <a href="#about" onclick="myLeftSidebar_close()" class="w3-bar-item w3-button">Portfolio</a>
-  <a href="javascript:void(0)" onclick="myRightSidebar_open()"  class="w3-bar-item w3-button">Let's Chat</a>
-  <h3 class="social-bar" style="margin-bottom:122px;padding:0 15px">Join Us</h3>
-  <div class="social-bar" style="margin-bottom:80px;padding-left:6px;">
-    <a href=""><i class="fab fa-facebook"></i></a>
-    <a href=""><i class="fab fa-instagram"></i></a>
-    <a href=""><i class="fab fa-twitter"></i></a>
-    <a href=""><i class="fab fa-pinterest"></i></a>
-  </div>
-  <div class="social-bar" style="padding:0 15px;font-size:14px;margin-bottom:20px;">
-    <p><span style="font-size:16px;">&copy;</span> 2020 Pyramid Special Jewelry, Inc. All Rights Reserved.</p>
-  </div>
-  <div class="copyright" style="padding:0 15px;font-size:12px;position:absolute;bottom:0;margin-bottom:14px;">
-    <a href="">Privacy</a>
-    <span>|</span>
-    <a href="">Terms</a>
-    <span>|</span>
-    <a href="">Site Map</a>
-  </div>
-</nav>
+  <aside id="contactPanelOverlay" class="slidein-contactpanel">
+    asd
+  </aside>
 
-<!-- Sidebar Right (hidden by default) -->
-<nav class="w3-sidebar w3-right w3-bar-block w3-card w3-top w3-large w3-animate-right" style="display:none;z-index:2;" id="myRightSidebar">
-  <a href="javascript:void(0)" onclick="myRightSidebar_close()" class="w3-bar-item w3-button">
-    <i class="fa fa-times" style="text-align:center !important;"></i>
-  </a>
-  <div class="w3-card" style="width:500px;margin: 20px auto;">
-    <div class="w3-bar-item" style="background:black;color:white;">Do you need any design work done?</div>
-    <a href="" class="w3-bar-item w3-button">Detailed Sketch by Hand</a>
-    <a href="" class="w3-bar-item w3-button">Hand Carved Wax Model</a>
-    <a href="" class="w3-bar-item w3-button">3D CAD Design</a>
-    <a href="" class="w3-bar-item w3-button">No thank you.</a>
-    <div style="display:flex;justify-content:space-between;margin-bottom:80px;background:black;color:white !important;">
-      <button class="w3-button" onclick="myRightSidebar_close()">
-        <i class="fa fa-arrow-left" style="font-size:13px;"></i>
-        <span>Back</span>
-      </button>
-      <button class="w3-button">
-        <span>Next</span>
-        <i class="fa fa-arrow-right" style="font-size:13px;"></i>
-      </button>
+  <aside id="menuPanelOverlay">
+    <div id="menuPanel" class="slidein-menupanel">
+      <i id="menuPanelQuit" class="fa fa-times fadein"></i>
+      <div id="menuPanelContent" class="fadein">
+        <h1 class="logo">Pyramid Special Jewelry</h1>
+        <nav class="fadein">
+          <a href="#">Home</a>
+          <a href="#">Company</a>
+          <a href="#">Services</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+      <div id="menuPanelFooter">
+        <div class="social-icons" style="margin-bottom:20px;">
+          <h3 style="margin-bottom:8px;">Join Us</h3>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-tumblr"></i>
+        </div>
+        <div style="font-size: 12px;font-family: 'Arial';">
+          <div>Copyright &copy; 2020 Pyramid Special Jewelry, Inc.</div>
+          <div style="margin-top: 4px;">All Rights Reserved.
+            <span><a href="#">Privacy</a></span>
+            |
+            <span><a href="#">Terms</a></span>
+            |
+            <span><a href="#">Site Map</a></span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
+  </aside>
 
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div id="hamburger-box" class="w3-button w3-padding-16 w3-left" onclick="myLeftSidebar_open()">
-      <i id="hamburger-icon" class="fas fa-bars"></i>
+  <header class="header">
+    <div>
+      <i class="fa fa-bars" id="menuPanelTrigger"></i>
+      <h1 class="logo">Pyramid Special Jewelry</h1>
     </div>
-    <div class="w3-button w3-right w3-padding-16" onclick="myRightSidebar_open()">Let's Chat</div>
-    <div class="w3-center w3-padding-16">Pyramid Special<br> Jewelry</div>
-  </div>
-</div>
+    <nav>
+      <a href="">Home</a>
+      <a href="">Company</a>
+      <a href="">Services</a>
+      <a href="">Gallery</a>
+      <a href="">Contact</a>
+    </nav>
+    <button id="contactPanelTrigger">Schedule Appointment</button>
+  </header>
 
-
-<script>
-// Script to open and close sidebar
-function myLeftSidebar_open() {
-  document.getElementById("myLeftSidebar").style.display = "block";
-}
-function myLeftSidebar_close() {
-  document.getElementById("myLeftSidebar").style.display = "none";
-}
-
-function myRightSidebar_open() {
-  document.getElementById("myRightSidebar").style.display = "block";
-}
-function myRightSidebar_close() {
-  document.getElementById("myRightSidebar").style.display = "none";
-}
-
-function myFunction() {
-  var x = document.getElementById("Demo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
+  <section>
+    <img src="img/01.jpg" alt="" style="width:100%;">
+  </section>
 
 </body>
 </html>
