@@ -21,10 +21,16 @@ menuPanelQuit.addEventListener('click', function() {
 contactPanelTrigger.addEventListener('click', function() {
   contactPanel.style.display = "flex"
   setTimeout(function() {
+    contactPanelTrigger.style.opacity = "0"
+  }, 100)
+  setTimeout(function() {
+    contactPanelTrigger.style.display = "none"
     body.style.overflow = "hidden"
   }, 400)
 })
 contactPanelQuit.addEventListener('click', function() {
   contactPanel.style.display = "none"
   body.style.overflow = "auto"
+  contactPanelTrigger.style.opacity = "1"
+  contactPanelTrigger.style.display = "flex"
 })
