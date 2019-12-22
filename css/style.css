@@ -625,7 +625,7 @@ nav ul li {
 }
 
 #highlight {
-  color: #e83f43;
+  color: #e8ae68;
 }
 
 img {
@@ -652,7 +652,7 @@ img {
   font-weight: 500;
   line-height: 1.1;
   text-decoration: underline;
-  color: #e83f43;
+  color: #e8ae68;
 }
 .intro .title .underline {
   color: #232323;
@@ -877,6 +877,22 @@ button {
 }
 
 /* My added styles */
+.social-bar {
+	position: fixed;
+	z-index: 1999;
+	top: 32%;
+	right: 10%;
+	background: #e8ae68;
+	display: flex;
+	flex-direction: column;
+}
+.social-bar i {
+	font-size: 24px;
+	margin: 10px;
+	cursor: pointer;
+	color: white;
+}
+
 @keyframes revealTop {
   0% {
     margin-top: -3000px;
@@ -932,19 +948,19 @@ aside section div {
 	border-left: 0 !important;
 }
 
-@keyframes revealCards {
-  0% {
-    margin-left: -30px;
-  }
-  100% {
-		margin-left: 0;
-  }
-}
 #contact0 {
-	display: block;
-	/* animation: revealCards 0.8s; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 #contact1 {
 	display: none;
-	/* animation: revealCards 0.8s; */
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media (max-width: 800px) {
+	.social-bar {
+		display: none;
+	}
 }

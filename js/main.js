@@ -61,7 +61,7 @@ function openContact(i) {
   else {
     if( i === 1 ) {
       contact0.style.display = "none";
-      contact1.style.display = "block";
+      contact1.style.display = "flex";
     }
     if( i === 2 ) {
       console.log('coming soon...');
@@ -73,7 +73,7 @@ function closeContact(i) {
   if(!i) { contact.style.display = "none"; }
   else {
     if( i === 1 ) {
-      contact0.style.display = "block";
+      contact0.style.display = "flex";
       contact1.style.display = "none";
     }
   }
