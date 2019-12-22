@@ -1,3 +1,7 @@
+const contact = document.querySelector('aside');
+const contact0 = document.querySelector('#contact0');
+const contact1 = document.querySelector('#contact1');
+
 const items = document.querySelectorAll('.slider-item');
 const itemCount = items.length;
 const nextItem = document.querySelector('.next');
@@ -51,6 +55,26 @@ previousItem.addEventListener('click', showPreviousItem);
 document.addEventListener('keydown', keyPress);
 navItem.addEventListener('click', toggleNavigation);
 
-function openContact() {
-  console.log('opening...')
+// added by me
+function openContact(i) {
+  if( !i ) { contact.style.display = "flex"; }
+  else {
+    if( i === 1 ) {
+      contact0.style.display = "none";
+      contact1.style.display = "block";
+    }
+    if( i === 2 ) {
+      console.log('coming soon...');
+    }
+  }
+}
+
+function closeContact(i) {
+  if(!i) { contact.style.display = "none"; }
+  else {
+    if( i === 1 ) {
+      contact0.style.display = "block";
+      contact1.style.display = "none";
+    }
+  }
 }

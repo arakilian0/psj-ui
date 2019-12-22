@@ -1,0 +1,16 @@
+For public distribution:
+  - validate html
+  - clear quotes
+      Search the html document
+      for any single quotes.
+      If found replace with
+      double quotes.
+  - minify html
+  - minify css
+    - host on aws s3 X cloudfront
+  - minify js
+    - host on aws s3 X cloudfront
+  - compress jpegs
+    - host on aws s3 X cloudfront
+  - optimize svgs
+    - directly input to html
