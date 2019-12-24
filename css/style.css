@@ -877,22 +877,6 @@ button {
 }
 
 /* My added styles */
-.social-bar {
-	position: fixed;
-	z-index: 1999;
-	top: 32%;
-	right: 10%;
-	background: #e8ae68;
-	display: flex;
-	flex-direction: column;
-}
-.social-bar i {
-	font-size: 24px;
-	margin: 10px;
-	cursor: pointer;
-	color: white;
-}
-
 @keyframes revealTop {
   0% {
     margin-top: -3000px;
@@ -901,7 +885,7 @@ button {
 		margin-top: 0;
   }
 }
-aside {
+#contact {
   position: absolute;
   top: 0;
   left: 0;
@@ -911,29 +895,31 @@ aside {
   display: none;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
   background: #e8ae68;
   animation: revealTop 0.8s;
 	box-shadow: 0 0 7px 5px;
 }
-aside svg {
+#contact svg {
+	display: none;
 	width: 40px;
 	cursor: pointer;
-	align-self: flex-end;
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
+	/* margin-bottom: 20px; */
+	margin-right: -50px;
 }
-aside section {
+#contact section {
 	background: white;
 	width: auto !important;
 	padding: 30px !important;
+	margin-top: -40px;
 }
-aside section p {
+#contact section p {
 	font-size: 2rem;
 	color: #e8ae68;
 	margin-bottom: 20px;
+	line-height: 36px;
 }
-aside section div {
+#contact section div {
 	margin-left: 30px;
 	color: #e8ae68;
 }
@@ -949,7 +935,7 @@ aside section div {
 }
 
 #contact0 {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	justify-content: center;
 }
@@ -959,8 +945,18 @@ aside section div {
 	justify-content: center;
 }
 
-@media (max-width: 800px) {
-	.social-bar {
-		display: none;
-	}
+@keyframes fadeInCard {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeOutCard {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fadeInCard {
+	animation: fadeInCard 0.4s;
+}
+.fadeOutCard {
+	animation: fadeOutCard 0.4s;
 }

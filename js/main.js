@@ -1,7 +1,3 @@
-const contact = document.querySelector('aside');
-const contact0 = document.querySelector('#contact0');
-const contact1 = document.querySelector('#contact1');
-
 const items = document.querySelectorAll('.slider-item');
 const itemCount = items.length;
 const nextItem = document.querySelector('.next');
@@ -56,8 +52,19 @@ document.addEventListener('keydown', keyPress);
 navItem.addEventListener('click', toggleNavigation);
 
 // added by me
+const contact = document.querySelector('#contact');
+const contactQuit = document.querySelector('#contactQuit');
+const contact0 = document.querySelector('#contact0');
+const contact1 = document.querySelector('#contact1');
+
 function openContact(i) {
-  if( !i ) { contact.style.display = "flex"; }
+  if( !i ) {
+    contact.style.display = "flex";
+    setTimeout(function() {
+      contactQuit.style.display = "flex";
+      contact0.style.display = "flex";
+    }, 800);
+  }
   else {
     if( i === 1 ) {
       contact0.style.display = "none";
@@ -68,13 +75,20 @@ function openContact(i) {
     }
   }
 }
-
 function closeContact(i) {
-  if(!i) { contact.style.display = "none"; }
+  if(!i) {
+    contact0.style.display = "none";
+    contact1.style.display = "none";
+    contact.style.display = "none";
+    contactQuit.style.display = "none";
+  }
   else {
     if( i === 1 ) {
       contact0.style.display = "flex";
       contact1.style.display = "none";
+    }
+    if( i === 2 ) {
+      console.log('coming soon...');
     }
   }
 }

@@ -7,6 +7,7 @@
   <!-- SEO -->
   <title>Fine Jewelry Manufacturing &amp; Design &diams; Pyramid Special Jewelry</title>
   <meta name="description" content="This is the description">
+  <meta name="keywords" content="Some, keywords, go here.">
   <!-- Assets -->
   <script src="https://kit.fontawesome.com/3281ab3c06.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/reset.css">
@@ -15,80 +16,75 @@
 </head>
 <body>
 
-  <div class="social-bar">
-    <i class="fab fa-instagram"></i>
-    <i class="fab fa-facebook"></i>
-    <i class="fab fa-linkedin"></i>
-    <i class="fab fa-linkedin"></i>
-  </div>
-
-  <aside>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" onclick="closeContact()">
-      <path fill="#fff" d="M26 0C11.664 0 0 11.663 0 26s11.664 26 26 26 26-11.663 26-26S40.336 0 26 0zm0 50C12.767 50 2 39.233 2 26S12.767 2 26 2s24 10.767 24 24-10.767 24-24 24z"/>
-      <path fill="#fff" d="M35.707 16.293c-.391-.391-1.023-.391-1.414 0L26 24.586l-8.293-8.293c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414L24.586 26l-8.293 8.293c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293L26 27.414l8.293 8.293c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414L27.414 26l8.293-8.293c.391-.391.391-1.023 0-1.414z"/>
-    </svg>
-    <section class="container" id="contact0">
-      <p>How did you here about us?</p>
-      <div>
-        <input type="checkbox">
-        <span>Google</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>Yelp</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>LinkedIn</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>Instagram</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>Facebook</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>Other</span>
-      </div>
-      <span class="contact-controls">
-        <button class="contact-next" onclick="openContact(1)">Next</button>
-        <button class="contact-prev" onclick="closeContact()">Back</button>
-      </span>
-    </section>
-    <section class="container" id="contact1">
-      <p>How would you like to get in touch?</p>
-      <div>
-        <input type="checkbox">
-        <span>Phone Call</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>Email</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>Skype</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>Instagram</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>Facebook</span>
-      </div>
-      <div>
-        <input type="checkbox">
-        <span>Other</span>
-      </div>
-      <span class="contact-controls">
-        <button class="contact-next" onclick="openContact(2)">Next</button>
-        <button class="contact-prev" onclick="closeContact(1)">Back</button>
-      </span>
-    </section>
+  <aside id="contact">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" id="contactQuit" viewBox="0 0 52 52" onclick="closeContact()" style="margin-left: auto;">
+        <path fill="#fff" d="M26 0C11.664 0 0 11.663 0 26s11.664 26 26 26 26-11.663 26-26S40.336 0 26 0zm0 50C12.767 50 2 39.233 2 26S12.767 2 26 2s24 10.767 24 24-10.767 24-24 24z"/>
+        <path fill="#fff" d="M35.707 16.293c-.391-.391-1.023-.391-1.414 0L26 24.586l-8.293-8.293c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414L24.586 26l-8.293 8.293c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293L26 27.414l8.293 8.293c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414L27.414 26l8.293-8.293c.391-.391.391-1.023 0-1.414z"/>
+      </svg>
+      <section class="container fadeInCard" id="contact0">
+        <p>How did you here about us?</p>
+        <div>
+          <input type="checkbox">
+          <span>Google</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Yelp</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>LinkedIn</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Instagram</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Facebook</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Other</span>
+        </div>
+        <span class="contact-controls">
+          <button class="contact-next" onclick="openContact(1)">Next</button>
+          <button class="contact-prev" onclick="closeContact()">Back</button>
+        </span>
+      </section>
+      <section class="container fadeInCard" id="contact1">
+        <p>Which service do you need <br>completed?</p>
+        <div>
+          <input type="checkbox">
+          <span>3D Cad Design</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Silver, Gold, or Platinum Casting</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>WhatsApp</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Instagram</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Facebook</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Other</span>
+        </div>
+        <span class="contact-controls">
+          <button class="contact-next" onclick="openContact(2)">Next</button>
+          <button class="contact-prev" onclick="closeContact(1)">Back</button>
+        </span>
+      </section>
+    </div>
   </aside>
 
   <nav class="flex-nav">
