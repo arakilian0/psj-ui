@@ -56,6 +56,7 @@ const contact = document.querySelector('#contact');
 const contactQuit = document.querySelector('#contactQuit');
 const contact0 = document.querySelector('#contact0');
 const contact1 = document.querySelector('#contact1');
+const contact2 = document.querySelector('#contact2');
 
 function openContact(i) {
   if( !i ) {
@@ -69,9 +70,13 @@ function openContact(i) {
     if( i === 1 ) {
       contact0.style.display = "none";
       contact1.style.display = "flex";
+      contact2.style.display = "none";
     }
     if( i === 2 ) {
-      console.log('coming soon...');
+      console.log('asd');
+      contact0.style.display = "none";
+      contact1.style.display = "none";
+      contact2.style.display = "flex";
     }
   }
 }
@@ -79,6 +84,7 @@ function closeContact(i) {
   if(!i) {
     contact0.style.display = "none";
     contact1.style.display = "none";
+    contact2.style.display = "none";
     contact.style.display = "none";
     contactQuit.style.display = "none";
   }
@@ -86,9 +92,12 @@ function closeContact(i) {
     if( i === 1 ) {
       contact0.style.display = "flex";
       contact1.style.display = "none";
+      contact2.style.display = "none";
     }
     if( i === 2 ) {
-      console.log('coming soon...');
+      contact0.style.display = "none";
+      contact1.style.display = "flex";
+      contact2.style.display = "none";
     }
   }
 }

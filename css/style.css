@@ -939,7 +939,7 @@ button {
 	flex-direction: column;
 	justify-content: center;
 }
-#contact1 {
+#contact1, #contact2 {
 	display: none;
 	flex-direction: column;
 	justify-content: center;
